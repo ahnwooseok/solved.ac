@@ -7,16 +7,12 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        st = new StringTokenizer(br.readLine());
-        int[] array = new int[N];
-        for (int i = 0; i < N; i++) array[i] = Integer.parseInt(st.nextToken());
-        for (int k = 0; k < M; k++){
+        HashMap<String, String> map = new HashMap<>();
+        
+        for (int i = 0; i < N; i++){
             st = new StringTokenizer(br.readLine());
-            int i = Integer.parseInt(st.nextToken()) - 1;
-            int j = Integer.parseInt(st.nextToken()) - 1;
-            int sum = 0;
-            for (int l = i; l < j + 1; l++) sum += array[l];
-            System.out.println(sum);
+            map.put(st.nextToken(), st.nextToken());
         }
+        for (int i = 0; i < M; i++) System.out.println(map.get(br.readLine()));
     }
 }
