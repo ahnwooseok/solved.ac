@@ -23,6 +23,6 @@ public class Main {
                 }
             }
         }
-        System.out.println(answer);
+        System.out.println(M - answer);
     }
 }
